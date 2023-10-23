@@ -1,0 +1,89 @@
+/* ------------------------------
+
+          Modal Styling
+
+---------------------------------- */
+body{
+    background:url(/img/project-2.jpg) no-repeat center center/cover;
+    height:100vh ;
+    position: relative;
+}
+#open-btn{
+    position: absolute;
+    top:70% ;
+    left:10%;
+    width:350px;
+    font-size: 2rem;
+    color: #fff;
+    border-radius:15px;
+    height:80px;
+    background:transparent;
+    border:solid 2px #fff;
+    padding-bottom:100px;
+    box-shadow:0 0 3px black;
+    transition: .5s;
+    
+}
+#open-btn:hover{
+    background-color: #fff;
+    
+    color: black;
+    
+}
+#modal{
+    position: absolute;
+    top: 50%;
+    left:50% ;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+    height:100px;
+    width:200px;
+    padding:10px 20px  ;
+    background-color: #fff;
+    border:solid 2px #fff ;
+    border-radius:5px ;
+    box-shadow:10px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: .4s;
+
+}
+#close-btn{
+    height: 43px;
+    width: 30px; 
+    padding-bottom:6px ;
+    font-size:3rem;
+    font-weight: bolder;
+    cursor: pointer;
+
+    
+}
+#close-btn:hover{
+    background-color: red;
+    color:#fff;
+}
+#modal-container{
+    /* display:none ; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    z-index: 1;
+    background-color:rgba(0,0,0,) ;
+}
+
+/*............Modal animation section.................  */
+@keyframes animatemodal {
+    form{
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top:50%;
+        opacity:1;
+    }
+}
